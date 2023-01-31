@@ -1,24 +1,44 @@
-# ValueAdd NestJS Packages
+# @nestjs-architects/typed-cqrs
 
-[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
-[![build](https://github.com/valueadd-poland/nestjs-packages/workflows/MASTER%20CI/badge.svg)](https://github.com/valueadd-poland/nestjs-packages/actions?query=workflow%3A%22MASTER+CI%22)
+[![version](https://img.shields.io/npm/v/@nestjs-architects/typed-cqrs.svg)](https://www.npmjs.com/package/@nestjs-architects/typed-cqrs)
+[![downloads](https://img.shields.io/npm/dt/@nestjs-architects/typed-cqrs.svg)](https://www.npmjs.com/package/@nestjs-architects/typed-cqrs)
 
-A collection of packages, modules and utilities for NestJS.
+Tired of hand-typing types for NestJS CQRS package? We got you covered!
 
-| Package                                                       | Description                                                        | Version                                                                                                                                           | Changelog                                        |
-| ------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| [`@valueadd/nestjs-streaming`](packages/streaming)            | Useful providers that allows working with streaming like responses | [![version](https://img.shields.io/npm/v/@valueadd/nestjs-streaming.svg)](https://www.npmjs.com/package/@valueadd/nestjs-streaming)               | [changelog](packages/streaming/CHANGELOG.md)     |
-| [`@valueadd/nestjs-ng-pdf-generator`](packages/pdf-generator) | Extension to the @nestjs/ng-universal with pdf-generator api       | [![version](https://img.shields.io/npm/v/@valueadd/nestjs-ng-pdf-generator.svg)](https://www.npmjs.com/package/@valueadd/nestjs-ng-pdf-generator) | [changelog](packages/pdf-generator/CHANGELOG.md) |
-| [`@nestjs-architects/typed-cqrs`](packages/typed-cqrs)        | Enhance @nestjs/cqrs building blocks with auto-inferring types.    | [![version](https://img.shields.io/npm/v/@nestjs-architects/typed-cqrs.svg)](https://www.npmjs.com/package/@nestjs-architects/typed-cqrs)         | [changelog](packages/typed-cqrs/CHANGELOG.md)    |
+# Usage
 
-## Development
+First install base `@nestjs/cqrs` package.
 
-### Setup
+```sh
+$ npm i @nestjs/cqrs
+```
 
-- `$ npm install`
-- `$ npm run lerna bootstrap`
+All you need to do, is to extend your query with type of expected response.
 
-### Publish packages
+```typescript
+import { Query } from '@nestjs-architects/typed-cqrs';
 
-- `npm run lerna version -- --conventional-commits`
-- `npm run lerna publish from-git`
+export class GetProfileQuery extends Query<ResultType> {}
+```
+
+# Profit
+
+Now, when implementing handler, you get all type completion & safety!
+
+![showcase-handler](typed-handler.gif)
+
+```typescript
+import { IInferredQueryHandler, QueryHandler } from '@nestjs/cqrs';
+
+@QueryHandler(GetProfileQuery)
+export class GetProfileHandler implements IInferredQueryHandler<GetProfileQuery> {}
+```
+
+As well as, results are correctly typed as well!
+![showcase-handler](typed-outcome.gif)
+
+# Development - verify if package works
+
+After running `npm run build`, run `npm link` from the root directory to have it visible as globally installed package.
+
+Next, in the project you want to use it, within its root directory, run `npm link @nestjs-architects/typed-cqrs`
