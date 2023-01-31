@@ -13,9 +13,10 @@
     "target": "es2017",
     "lib": ["es7"],
     "baseUrl": "./src",
-    "paths": {
-      "@valueadd/*": ["./*/src"]
-    }
+    "outDir": "./dist",
+    "paths": {},
+    "types": ["node"]
   },
-  "exclude": ["node_modules"]
+  "include": ["src"],
+  "exclude": ["example", "node_modules"]
 }
