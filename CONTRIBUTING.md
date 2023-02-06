@@ -1,4 +1,4 @@
-# Contributing to NestJS Packages
+# Contributing to NestJS Architects
 
 #### Welcome
 
@@ -15,9 +15,9 @@ We expect contributors to act professionally and respectfully
 to make our work space safe and welcoming. Be kind. Respect people, their culture, their work.
 Listen them. Consider their viewpoint.
 
-## Developing for NestJS Packages
+## Developing for NestJS Architects
 
-The most important part, to add any value to NestJS Packages you have to follow up this list.
+The most important part, to add any value to NestJS Architects you have to follow up this list.
 This section describes our methodologies and conventions.
 
 1. Familiarize with Git flow - [read more](//nvie.com/posts/a-successful-git-branching-model/),
@@ -32,7 +32,7 @@ This section describes our methodologies and conventions.
 4. When your issue was marked as to do, fork the Github repository, create a branch on your Github
    fork of the repository and implement your change.
 
-5. Submit the branch as a PR to relevant NestJS Packages repository.
+5. Submit the branch as a PR to relevant NestJS Architects repository.
 
 6. Make sure your PR passes the build at CI.
 

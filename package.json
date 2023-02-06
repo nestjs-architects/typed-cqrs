@@ -19,8 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nestjs-architects/typed-cqrs.git",
-    "directory": "packages/typed-cqrs"
+    "url": "git+https://github.com/nestjs-architects/typed-cqrs.git"
   },
   "keywords": [
     "nestjs",
