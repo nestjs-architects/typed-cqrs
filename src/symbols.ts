@@ -1,1 +1,1 @@
-export const resultType = Symbol('resultType')
+export const resultType = Symbol('resultType');
