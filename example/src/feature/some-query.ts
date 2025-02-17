@@ -1,3 +1,3 @@
-import { Query } from '@nestjs-architects/typed-cqrs';
+import { Query } from '@nestjs/cqrs';
 
 export class SomeQuery extends Query<string> {}

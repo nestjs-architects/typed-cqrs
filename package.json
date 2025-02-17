@@ -45,20 +45,20 @@
     "url": "https://github.com/nestjs-architects/typed-cqrs/issues"
   },
   "devDependencies": {
-    "@nestjs/common": "^9.0.0",
-    "@nestjs/core": "^9.0.0",
-    "@nestjs/cqrs": "9.0.1",
-    "@types/node": "^18.11.18",
-    "@typescript-eslint/eslint-plugin": "^4.6.1",
-    "@typescript-eslint/parser": "^4.6.1",
-    "eslint": "^7.12.1",
-    "eslint-config-prettier": "^6.0.0",
-    "git-format-staged": "2.1.1",
-    "husky": "6.0.0",
-    "prettier": "2.2.1",
-    "reflect-metadata": "0.1.13",
-    "rxjs": "^7.2.0",
-    "typescript": "^5.4.5"
+    "@nestjs/common": "^11.0.9",
+    "@nestjs/core": "^11.0.9",
+    "@nestjs/cqrs": "11.0.2",
+    "@types/node": "^22.13.4",
+    "@typescript-eslint/eslint-plugin": "^8.24.0",
+    "@typescript-eslint/parser": "^8.24.0",
+    "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "git-format-staged": "3.1.1",
+    "husky": "9.1.7",
+    "prettier": "3.5.1",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "^7.8.1",
+    "typescript": "^5.7.3"
   },
   "husky": {
     "hooks": {
