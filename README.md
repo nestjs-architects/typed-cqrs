@@ -5,6 +5,19 @@
 
 Tired of hand-typing types for NestJS CQRS package? We got you covered!
 
+# ⚠️ This library is now deprecated!
+All features provided by `@nestjs-architects/typed-cqrs` are now available natively in [@nestjs/cqrs](https://github.com/nestjs/cqrs) starting from NestJS 11.
+
+This library will no longer be maintained or developed, but it will still work with NestJS@11 and old versions.
+
+## Migration Guide
+Migrating to `@nestjs/cqrs` is simple:
+
+- Replace imports from `@nestjs-architects/typed-cqrs` to `@nestjs/cqrs`.
+- Drop `Inferred` from `IInferredQueryHandler` and `IInferredCommandHandler` – `IQueryHandler` and `ICommandHandler` now support its extensions.
+- Command, Query, CommandResult, and QueryResult are already included in @nestjs/cqrs.
+- A quick find & replace in your codebase is all you need!
+
 # Usage
 
 First install base `@nestjs/cqrs` package.
@@ -36,9 +49,3 @@ export class GetProfileHandler implements IInferredQueryHandler<GetProfileQuery>
 
 As well as, results are correctly typed as well!
 ![showcase-handler](typed-outcome.gif)
-
-# Development - verify if package works
-
-After running `npm run build`, run `npm link` from the root directory to have it visible as globally installed package.
-
-Next, in the project you want to use it, within its root directory, run `npm link @nestjs-architects/typed-cqrs`

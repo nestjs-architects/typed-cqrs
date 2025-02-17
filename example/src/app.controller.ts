@@ -1,6 +1,5 @@
-import { CommandResult, QueryResult } from '@nestjs-architects/typed-cqrs';
 import { Controller, Get } from '@nestjs/common';
-import { CommandBus, QueryBus } from '@nestjs/cqrs';
+import { CommandBus, CommandResult, QueryBus, QueryResult } from '@nestjs/cqrs';
 import { SomeCommand, SomeQuery } from './feature';
 
 @Controller()
